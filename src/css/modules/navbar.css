@@ -1,0 +1,10 @@
+/* Modify logo placement */
+div.navbar__inner > div > a > img {
+width: 125%;
+height: 125%;
+margin-left: -2.72%;
+}
+div.navbar__inner > div > a > strong.navbar__title {
+	display: block;
+	color: #f0eff2;
+}

@@ -1,0 +1,17 @@
+/* Level2 lists should be lower-alpha */
+ol ol,
+ul ol {
+  list-style-type: lower-alpha;
+}
+
+/* Fix margins for unordered list items */
+ul li > p.p,
+ol li > p.p {
+  margin: 0;
+}
+
+/*
+ol li,
+ul li {
+  margin: 0 0 20px;
+}*/
