@@ -17,6 +17,9 @@
 strong.navbar__title {
     display: none; /* uncomment once deployed to eD */
     color: rgb(240,239,242);
+	flex-shrink:0;
+	max-width:100%;
+	text-overflow:unset;
 }
 
 /* Spacing between the top bar and heading fix */
