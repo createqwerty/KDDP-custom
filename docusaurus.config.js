@@ -13,10 +13,10 @@ module.exports = {
 //      indexName: 'YOUR_INDEX_NAME',
 //    },
     navbar: {
-      title: 'My Site',
+      title: 'KX Driver Help',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'KX Driver Help',
+        src: 'img/kyologo.gif',
       },
       items: [],
     },
