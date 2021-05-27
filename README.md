@@ -1,1 +1,2 @@
-# KDDP-custom
+# A Jorsek template for Docusaurus
+

@@ -1,58 +1,69 @@
 module.exports = {
-  "title": "KX Driver Help",
-  "tagline": "KYOCERA Webhelp",
-  "url": "https://your-docusaurus-test-site.com",
-  "baseUrl": "/",
-  "onBrokenLinks": "throw",
-  "onBrokenMarkdownLinks": "warn",
-  "favicon": "img/kyoicon.ico",
-  "organizationName": "KYOCERA",
-  "projectName": "kyowebhelp",
-  "themeConfig": {
-    "navbar": {
-      "title": "KX Driver Help",
-      "logo": {
-        "alt": "KX Driver Help",
-        "src": "img/kyologo.gif"
-      }
+  title: 'KX Driver Help',
+  tagline: 'KYOCERA Webhelp',
+  url: 'https://your-docusaurus-test-site.com',
+  baseUrl: '/',
+  onBrokenLinks: 'throw',
+  favicon: 'img/kyoicon.ico',
+  organizationName: 'your-org', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
+  themeConfig: {
+//    algolia: {
+//      apiKey: 'YOUR_API_KEY',
+//      indexName: 'YOUR_INDEX_NAME',
+//    },
+    navbar: {
+      title: 'My Site',
+      logo: {
+        alt: 'My Site Logo',
+        src: 'img/logo.svg',
+      },
+      items: [],
     },
-    "hideableSidebar": true,
-    "footer": {
-      "style": "dark",
-      "copyright": "Copyright © 2021 KYOCERA"
+	hideableSidebar: true,
+    footer: {
+      style: 'dark',
+      links: [],
+      copyright: `Copyright © ${new Date().getFullYear()}.`,
     },
-    "colorMode": {
-      "respectPrefersColorScheme": true,
-      "switchConfig": {
-        "lightIcon": "○",
-        "darkIcon": "●",
-        "darkIconStyle": {
-          "color": "#f4f4f4"
+	colorMode: {
+      respectPrefersColorScheme: true,
+      switchConfig: {
+        lightIcon: '○',
+        darkIcon: '●',
+        darkIconStyle: {
+          color: '#f4f4f4'
         },
-        "lightIconStyle": {
-          "color": "#f4f4f4"
+        lightIconStyle: {
+          color: '#f4f4f4'
         }
       }
     }
   },
-  "plugins": 
-	  [require.resolve('docusaurus-lunr-search')]
-  ,
-  "presets": [
+  presets: [
     [
-      "@docusaurus/preset-classic",
+      '@docusaurus/preset-classic',
       {
-        "blog": false,
-        "pages": false,
-        "docs": {
-          "sidebarPath": "./sidebars.js",
-          "path": "./docs",
-          "routeBasePath": "/"
+        docs: {
+          routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          // In order to display a link to edit your documents, please change this value.
+          // Refer to Docusaurus v2 documentation for more info.
+          // editUrl: 'http://easydita.com',
         },
-        "theme": {
-          "customCss": "/src/css/custom.css"
-        }
-      }
-    ]
-  ]
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
+  plugins: [
+    [require.resolve('@cmfcmf/docusaurus-search-local'), {
+        indexDocs: true,
+        docsRouteBasePath: '/',
+        indexDocSidebarParentCategories: 3,
+        indexPages: false,
+        language: "en"
+    }]
+  ],
 };
